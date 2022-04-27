@@ -131,7 +131,7 @@ legend {
     display: flex;
     align-items: center;
     justify-self: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .fotoContato {

@@ -7,27 +7,37 @@
     list-style: none;
 }
 
+a, p {
+    color: white;
+}
+
+:root {
+    --corJS1: #efd81d;
+    --corJS2: white;
+    --corCursoVideo1: #2222ff;
+}
+
 body {
     background-color: white;
     color: white;
 }
 
-a {
-    color: white;
-}
-
 .cabecalho {
-    background-color: #2222ff;
+    background-color: var(--corCursoVideo1);
     padding-top: 10px;
 }
 
 .marqueJS {
-    background-color: #efd81d;
+    background-color: var(--corJS1);
     border-bottom: 1px solid black;
     margin-top: 10px;
     padding: 10px;
     color: black;
     transition: 0.5s;
+}
+
+.marqueJS > a {
+    color: var(--corJS2);
 }
 
 .marqueJS:hover {
@@ -90,7 +100,7 @@ legend {
     margin-top: -10px;
     background-color: black;
     padding: 0.5em 0.75em;
-    color: #efd81d;
+    color: var(--corJS1);
 }
 
 .cabecalhoCodigo {
@@ -108,8 +118,11 @@ legend {
 }
 
 .rodape {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     border-top: 1px solid white;
-    height: 16em;
+    height: 50vh;
     padding-top: 10px;
     padding-left: 10px;
     background-color: black;
@@ -123,15 +136,16 @@ legend {
 
 .tituloRodape {
     font-size: 1.75em;
-    margin: 10px 0px;
+    margin: 35px 0px;
     text-align: center;
+    transition: 0.5s;
 }
 
-.flexContatos {
-    display: flex;
+.gridContatos {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
     align-items: center;
-    justify-self: center;
-    justify-content: space-around;
+    margin: 10px auto;
 }
 
 .fotoContato {
@@ -158,7 +172,10 @@ legend {
 @media (max-width: 690px) {
 
     .tituloRodape {
-        font-size: 1.25em;
+        font-size: 1.50em;
+    }
+    .liContatos {
+        font-size: 0.75em;
     }
 
 }
@@ -166,7 +183,12 @@ legend {
 @media (max-width: 350px) {
 
     .tituloHeader {
+        font-size: 0.75em;
         text-align: left;
+    }
+
+    .marqueJS > a {
+        font-size: 0.75em;        
     }
 
     .console {
@@ -175,17 +197,13 @@ legend {
     
 }
 
-@media (max-width: 300px) {
-    
-    .fotoContato {
-        display: none;
-    }
+@media (max-width: 300px) {    
 
     .linkContatos {
-        font-size: 2em;
+        font-size: 2.1em;
     }
 
-    .flexContatos {
+    .gridContatos {
         margin-top: 5px;
     }
 

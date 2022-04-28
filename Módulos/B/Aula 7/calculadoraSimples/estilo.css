@@ -127,11 +127,10 @@ legend {
     text-align: center;
 }
 
-.flexContatos {
-    display: flex;
+.gridContatos {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
     align-items: center;
-    justify-self: center;
-    justify-content: space-around;
 }
 
 .fotoContato {
@@ -185,7 +184,7 @@ legend {
         font-size: 2em;
     }
 
-    .flexContatos {
+    .gridContatos {
         margin-top: 5px;
     }
 

@@ -8,6 +8,8 @@
 }
 
 body {
+    display: grid;
+    grid-template-rows: 0.4fr 2fr 1fr;
     background-color: white;
     color: white;
 }
@@ -109,7 +111,6 @@ legend {
 
 .rodape {
     border-top: 1px solid white;
-    height: 16em;
     padding-top: 10px;
     padding-left: 10px;
     background-color: black;
@@ -123,7 +124,7 @@ legend {
 
 .tituloRodape {
     font-size: 1.75em;
-    margin: 10px 0px;
+    margin: 2% 0;
     text-align: center;
 }
 

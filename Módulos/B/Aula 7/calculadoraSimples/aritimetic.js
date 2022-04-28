@@ -1,77 +1,52 @@
-var escolha = Number(prompt('1 para soma, 2 para substração, 3 para muliplicação, 4 para divisão, 5 para resto, 6 para potenciação'))
+var input1 = document.getElementById('input1')
+var input2 = document.getElementById('input2')
 
-//mal posso esperar para aprender a usar o switch case :/
+function soma() {
 
-//a conversão acima é válida pois este if aqui de baixo pede que a escolha tenha o mesmo valor e o mesmo tipo
+    let n1 = Number(input1.value)
+    let n2 = Number(input2.value)
 
-if (escolha === 1) {
+    alert(n1+n2)
 
-    let input1 = Number(prompt('Primeiro número'))
+}
+function subtracao() {
 
-    let input2 = Number(prompt('Segundo número'))
+    let n1 = Number(input1.value)
+    let n2 = Number(input2.value)
 
-    let soma = input1 + input2
+    alert(n1-n2)
 
-    alert(soma)
-    
+}
+function multiplicacao() {
+
+    let n1 = Number(input1.value)
+    let n2 = Number(input2.value)
+
+    alert(n1*n2)
+
+}
+function divisao() {
+
+    let n1 = Number(input1.value)
+    let n2 = Number(input2.value)
+
+    alert(n1/n2)
+
+}
+function potencia() {
+
+    let n1 = Number(input1.value)
+    let n2 = Number(input2.value)
+
+    alert(n1**n2)
+
 }
 
-if (escolha == 2) {
+function resto() {
 
-    let input1 = Number(prompt('Primeiro número'))
+    let n1 = Number(input1.value)
+    let n2 = Number(input2.value)
 
-    let input2 = Number(prompt('Segundo número'))  
+    alert(n1%n2)
 
-    let substracao = input1 - input2
-
-    alert(substracao)
-    
-}
-
-if (escolha == 3) {
-
-    let input1 = Number(prompt('Primeiro número'))
-
-    let input2 = Number(prompt('Segundo número'))  
-
-    let multiplicacao = input1 * input2
-
-    alert(multiplicacao)
-    
-}
-
-if (escolha == 4) {
-
-    let input1 = Number(prompt('Primeiro número'))
-
-    let input2 = Number(prompt('Segundo número'))  
-
-    let divisao = input1 / input2
-
-    alert(divisao)
-    
-}
-
-if (escolha == 5) {
-
-    let input1 = Number(prompt('Primeiro número'))
-
-    let input2 = Number(prompt('Segundo número'))  
-
-    let resto = input1 % input2
-
-    alert(resto)
-    
-}
-
-if (escolha == 6) {
-
-    let input1 = Number(prompt('Primeiro número'))
-
-    let input2 = Number(prompt('Segundo número'))  
-
-    let potencia = input1 ** input2
-
-    alert(potencia)
-    
 }

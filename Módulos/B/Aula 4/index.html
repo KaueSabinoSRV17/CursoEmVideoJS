@@ -26,7 +26,7 @@
         <main>
 
             <article class="anotacoes">
-                <h2 class="tituloArtigo">Primeiro Código</h2>
+                <h2 class="tituloArtigo" id="tituloArtigo">Primeiro Código</h2>
                 <h3 class="tituloArtigo">Como podemos usar o Javascpript</h3>
                 <p class="paragrafoArtigo">Podemos iniciar o uso do Javascpript de duas maneiras principais: podemos usa-lo dentro do próprio HTML, através da tag script (nao é recomendado) ou podemos fazer da forma mais apropriada, que é inserindo uma tag script:src, onde pegamos um script vindo de um arquivo externo</p>
                 <h3 class="tituloArtigo">Comandos Básicos</h3>
@@ -45,20 +45,15 @@
                         <p class="paragrafoArtigo"><code>window.prompt('frase que vai aparecer na caixa de alerta')</code> - Este código tem a funçao inédita de deixar o usuário escrever em um campo de texto, que pode ser armazenado pelo próprio programa. veremos mais como usar esta possibilidade no próximo Código</p>
                     </li>
                 </ul>
-
-            <!-- estou tentando colocar tudo o que vemos nos códigos aqui dentro desta div, ao invés de usar um monte de alerts -->
+                
             <div class="console">
+
                 <header class="cabecalhoCodigo">
                     <h1 class="tituloCodigo">Área de Código</h1>
                 </header>
-          
-          
-          
-                <form action="" method="post">
-                    <legend>Insira seu nome</legend>
-                    <input type="text" name="nome" id="nome">
-                    <button onclick="botao()">Iniciar Código</button>
-                </form>
+
+                    <div class="flexBotao"><button onclick="botao()">Iniciar Código</button></div>
+
             </div>            
             
         </main>
@@ -80,4 +75,5 @@
             </nav>
         </footer>
 </body>
+<script src="hello.js"></script>
 </html>

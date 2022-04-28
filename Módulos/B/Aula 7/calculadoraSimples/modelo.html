@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
     <link rel="shortcut icon" href="media/favicon/favicon-16x16.png" type="image/x-icon">
-    <script src="aritimetic.js"></script>
     <title>Operadores Aritiméticos</title>
 </head>
 <body>
@@ -23,25 +22,39 @@
         <h1 class="marqueJS"><a href="https://www.youtube.com/playlist?list=PLntvgXM11X6pi7mW0O4ZmfUI1xDSIbmTm">Javascpript</a></h1>
         <h3 class="subtitulo" id="aula"></h3>
     </header>
-        <main>
+    <main>
             <div class="console">
                 <header class="cabecalhoCodigo">
                     <h1 class="tituloCodigo">Prompt Comando</h1>
                 </header>
+                <div class="calc">
+                    <div class="inputs">
+                        <label for="text">Primeiro número</label><input type="text" id="input1">
+                        <label for="text">Segundo número</label><input type="text" id="input2">
+                    </div>
+                    <button id="botao" class="botao" onclick="soma()">Soma</button> <!-- Método depreciado, ativar a função JS atráves de HTML. HTML deve ser apenas HTML, sem CSS e JS! (Refatorar depois)-->
+                    <button id="botao" class="botao" onclick="subtracao()">subtracao</button>
+                    <button id="botao" class="botao" onclick="divisao()">divisao</button>
+                    <button id="botao" class="botao" onclick="multiplicacao()">multiplicaco</button>
+                    <button id="botao" class="botao" onclick="resto()">resto</button>
+                    <button id="botao" class="botao" onclick="potencia()">potencia</button>
+                    <h1 id="resultado" style="color: black;"></h1>
+                </div>
             </div>
-        </main>
-        <footer class="rodape">
+    </main>
+    <footer class="rodape">
             <h1 class="tituloRodape">Página Desenvolvida por @Kauê Sabino</h1>
             <nav class="navContatos">
                 <ul class="listaContatos">
                     <li class="liContatos">
-                        <div class="flexContatos"><a class="linkContatos" href="github.com/KaueSabinoSRV17">GitHub</a><img src="media/GitHub.png" alt="Logo do GitHub" class="fotoContato"></div>
+                        <div class="gridContatos"><a class="linkContatos" href="github.com/KaueSabinoSRV17">GitHub</a><img src="media/GitHub.png" alt="Logo do GitHub" class="fotoContato"></div>
                     </li>
                     <li class="liContatos">
-                        <div class="flexContatos"><a class="linkContatos" href="github.com/KaueSabinoSRV17">Linkedin</a><img src="media/Linkedin.webp" alt="Logo do GitHub" class="fotoContato"></div>
+                        <div class="gridContatos"><a class="linkContatos" href="github.com/KaueSabinoSRV17">Linkedin</a><img src="media/Linkedin.webp" alt="Logo do Linkedin" class="fotoContato"></div>
                     </li>
                 </ul>
             </nav>
-        </footer>
+    </footer>
 </body>
+<script src="aritimetic.js"></script>
 </html>

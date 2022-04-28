@@ -68,6 +68,20 @@ body {
 }
 
 .anotacoes {
+    width: 85%;
+    color: black;
+    margin: 1.5em auto 0 auto;
+}
+
+h2#tituloArtigo {
+    text-align: center;
+}
+
+.tituloArtigo, .paragrafoArtigo {
+    margin-bottom: 30px;
+}
+
+.anotacoes {
     color: black;
     margin: 1em 0 0 1em;
 }

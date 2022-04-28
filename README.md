@@ -6,4 +6,4 @@ O modelo base de HTML e CSS se localiza na pasta Arquivos Complementares. Ele é
 
 ### Prompt de Comando
 
-O prompt vai ser usado apenas em aulas de sobre a manipulação da DOM
+O prompt vai ser usado apenas em aulas de sobre a manipulação da DOM, ou também para refatorar códigos que utilizam muitos alerts, que são péssimos no contexto de UX

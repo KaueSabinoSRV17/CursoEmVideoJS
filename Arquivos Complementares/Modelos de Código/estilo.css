@@ -11,9 +11,13 @@ a, p {
     color: white;
 }
 
+h2, h3, h4, h5, h6 {
+    font-size: 1.5em;
+}
+
 :root {
     --corJS1: #efd81d;
-    --corJS2: white;
+    --corJS2: black;
     --corCursoVideo1: #2222ff;
 }
 
@@ -70,24 +74,21 @@ body {
 .anotacoes {
     width: 85%;
     color: black;
-    margin: 1.5em auto 0 auto;
+    margin: 3em auto 0 auto;
+}
+
+.anotacoes > p {
+    line-height: 1.5em;
 }
 
 h2#tituloArtigo {
     text-align: center;
+    margin: 0 0 10px 0;
 }
 
-.tituloArtigo, .paragrafoArtigo {
+.tituloArtigo, .paragrafoArtigo, .liArtigo {
+color: black    ;
     margin-bottom: 30px;
-}
-
-.anotacoes {
-    color: black;
-    margin: 1em 0 0 1em;
-}
-
-.tituloArtigo, .paragrafoArtigo {
-    margin-bottom: 10px;
 }
 
 .console {
@@ -97,6 +98,21 @@ h2#tituloArtigo {
     height: 30rem;
     width: 60%;
     margin: 40px auto;
+}
+.flexBotao {
+    margin: auto 0 auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+button {
+    font-size: 1.25em;
+    text-align: center;
+    margin: auto;
+    padding: 15px;
+    background-color: black;
+    color: #efd81d;
 }
 
 form {
@@ -111,7 +127,7 @@ legend {
     font-size: larger;
     text-align: justify;
     border-radius: 1em 1em 0px 0px;
-    margin-top: -10px;
+    margin: -10px 0 9em 0;
     background-color: black;
     padding: 0.5em 0.75em;
     color: var(--corJS1);

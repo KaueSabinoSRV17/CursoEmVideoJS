@@ -8,7 +8,7 @@
 }
 
 a, p {
-    color: white;
+    color: black;
 }
 
 h2, h3, h4, h5, h6 {
@@ -19,6 +19,7 @@ h2, h3, h4, h5, h6 {
     --corJS1: #efd81d;
     --corJS2: black;
     --corCursoVideo1: #2222ff;
+    --corLinksHeader: #6363f5;
 }
 
 body {
@@ -32,14 +33,18 @@ body {
 }
 
 .marqueJS {
+    display: block;
     background-color: var(--corJS1);
     border-bottom: 1px solid black;
     margin-top: 10px;
     padding: 10px;
+}
+
+.marqueJS > h3 {    
     color: black;
 }
 
-.marqueJS > a {
+.linkMarque {
     color: var(--corJS2);
     transition: 0.5s;
 }
@@ -62,32 +67,43 @@ body {
     font-size: 1.25em;
 }
 
-.setaDrop {
-    display: inline;
-    padding: .25rem;
-    color: black;
-    background-color: white;
-}
-
-.navLinks ul {
+.drop {
     display: none;
+    transition: .5s;
 }
 
-.navLinks:hover ul {
+.navLinks.active .tituloLink {
+    background-color: var(--corJS1);
+    color: var(--corJS2);
+    border-bottom: 1px solid black;
+}
+
+.navLinks.active .drop {
     background-color: var(--corCursoVideo1);
+    top: 4.54rem;
     position: absolute;
     display: block;
 }
 
-.navLinks:hover ul li {
+.navLinks.active ul li {
+    background-color: var(--corJS1);
+    color: var(--corJS2);
     border-bottom: 1px solid black;
     padding: 1rem 2.05rem .5rem 2.05rem;
-    width: 100%;
+    width: 126%;
     text-align: center;
 }
 
 .tituloLink {
+    padding: 1rem;
     font-size: 1.25em;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.navLinks:hover .tituloLink {
+    background-color: var(--corJS1);
+    color: var(--corJS2);
 }
 
 .fotoLogo {
@@ -102,6 +118,10 @@ body {
 
 .tituloHeader:hover {
     font-size: 1.25em;
+}
+
+.tituloHeader > h1 {
+    color: white;
 }
 
 .autorCurso {
@@ -239,10 +259,19 @@ legend {
 @media (max-width: 690px) {
 
     .tituloRodape {
-        font-size: 20em;
+        margin: 1em 0 0 0;
+        font-size: 1.5rem;
     }
     .liContatos {
         font-size: 0.75em;
+    }
+
+}
+
+@media (max-width: 455px) {
+
+    .navLinks{
+        visibility: hidden;
     }
 
 }
@@ -265,6 +294,10 @@ legend {
 }
 
 @media (max-width: 300px) {    
+
+    .tituloRodape {
+        text-align: left;
+    }
 
     .linkContatos {
         font-size: 2.1em;

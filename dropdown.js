@@ -25,4 +25,12 @@ document.addEventListener('click', e => {
 
 */
 
-//o nome da arrow function no video é apenas e. vou manter assim, parece ser uma convenção eficiente
+
+
+function abrirLinks() {
+
+    let menu = document.getElementById('drop')
+    menu.classList.toggle('active')
+
+}
+

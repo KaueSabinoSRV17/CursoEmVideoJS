@@ -91,7 +91,7 @@ body {
     color: var(--corJS2);
     border-bottom: .1rem solid black;
     padding: 1rem 2.05rem .5rem 2.05rem;
-    width: 126%;
+    width: 125%;
     text-align: center;
 }
 
@@ -127,6 +127,12 @@ body {
 
 .autorCurso {
     font-size: medium;
+}
+
+main h3 {
+    margin: 1rem;
+    text-align: center;
+    color: black;
 }
 
 .anotacoes {
@@ -207,6 +213,10 @@ legend {
 
 .rodape {
     display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
     flex-direction: column;
     justify-content: center;
     border-top: .1rem solid white;

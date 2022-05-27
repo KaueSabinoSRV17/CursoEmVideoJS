@@ -239,10 +239,24 @@ legend {
     width: fit-content;
 }
 
+.rodapeConteudo p { 
+    font-size: small;
+    padding: .5rem 0 0 .5rem;
+    color: white;
+    text-align: justify;
+}
+
+.creditos {
+    color: white;
+    font-size: small;
+    text-align: center;
+}
+
 .tituloRodape {
     font-size: 1.75em;
-    margin: 3.5rem 0;
-    text-align: center;
+    margin-top: 1rem;
+    margin-inline: auto;
+    text-align: justify;
     transition: 0.5s;
 }
 

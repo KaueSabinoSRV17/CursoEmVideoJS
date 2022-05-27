@@ -117,6 +117,10 @@ body {
     transition: 0.5s;
 }
 
+.tituloHeader h1 {
+    font-size: large;
+}
+
 .tituloHeader:hover {
     font-size: 1.25em;
 }

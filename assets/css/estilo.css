@@ -248,8 +248,16 @@ legend {
     width: fit-content;
 }
 
+.rodapeConteudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .rodapeConteudo p { 
     font-size: small;
+    display: inline-block;
+    margin-block: 1rem;
     padding: .5rem 0 0 .5rem;
     color: white;
     text-align: justify;

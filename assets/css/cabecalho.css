@@ -1,0 +1,105 @@
+.cabecalho {
+    background-color: var(--corCursoVideo1);
+    padding-top: 1rem;
+}
+
+.marqueJS {
+    color: black;
+    display: block;
+    background-color: var(--corJS1);
+    border-bottom: .1rem solid black;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.marqueJS > h3 {    
+    color: black;
+}
+
+.linkMarque {
+    color: var(--corJS2);
+    transition: 0.5s;
+}
+
+.marqueJS > a:hover {
+    font-size: 1.25em;
+}
+
+.logo {
+    display: flex;
+}
+
+.flexHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navHeader {
+    font-size: 1.25em;
+}
+
+.drop {
+    display: none;
+    transition: .5s;
+}
+
+.navLinks.active .tituloLink {
+    background-color: var(--corJS1);
+    color: var(--corJS2);
+    border-bottom: .1rem solid black;
+}
+
+.navLinks.active .drop {
+    background-color: var(--corCursoVideo1);
+    top: 4.54rem;
+    position: absolute;
+    display: block;
+}
+
+.navLinks.active ul li {
+    background-color: var(--corJS1);
+    color: var(--corJS2);
+    border-bottom: .1rem solid black;
+    padding: 1rem 2.05rem .5rem 2.05rem;
+    width: 125%;
+    text-align: center;
+}
+
+.tituloLink {
+    padding: 1rem;
+    font-size: 1.25em;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.navLinks:hover .tituloLink {
+    background-color: var(--corJS1);
+    color: var(--corJS2);
+}
+
+.fotoLogo {
+    height: 5rem;
+}
+
+.tituloHeader {
+    text-align: justify;
+    margin: auto 0 auto 1rem;
+    transition: 0.5s;
+}
+
+.tituloHeader h1 {
+    font-size: large;
+}
+
+.tituloHeader:hover {
+    font-size: 1.25em;
+}
+
+.tituloHeader > h1 {
+    color: white;
+}
+
+.autorCurso {
+    font-size: medium;
+}

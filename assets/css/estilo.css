@@ -34,6 +34,7 @@ body {
 }
 
 .marqueJS {
+    color: black;
     display: block;
     background-color: var(--corJS1);
     border-bottom: .1rem solid black;
@@ -159,8 +160,13 @@ h2#tituloArtigo {
 }
 
 .tituloArtigo, .paragrafoArtigo, .liArtigo {
-color: black    ;
+    font-size: small;
+    color: black;
     margin-bottom: 3rem;
+}
+
+.tituloArtigo {
+    font-size: large;
 }
 
 .console {
@@ -221,10 +227,9 @@ legend {
 
 .rodape {
     display: flex;
-    position: fixed;
+    position: static;
     bottom: 0;
     left: 0;
-    width: 100vw;
     flex-direction: column;
     justify-content: center;
     border-top: .1rem solid white;
@@ -335,7 +340,7 @@ legend {
     }
 
     .console {
-        width: fit-content;
+        width: 50vw;
     }
     
 }

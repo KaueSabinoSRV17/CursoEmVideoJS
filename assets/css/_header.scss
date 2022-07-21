@@ -3,28 +3,6 @@
     padding-top: 1rem;
 }
 
-.marqueJS {
-    color: black;
-    display: block;
-    background-color: var(--corJS1);
-    border-bottom: .1rem solid black;
-    margin-top: 1rem;
-    padding: 1rem;
-}
-
-.marqueJS > h3 {    
-    color: black;
-}
-
-.linkMarque {
-    color: var(--corJS2);
-    transition: 0.5s;
-}
-
-.marqueJS > a:hover {
-    font-size: 1.25em;
-}
-
 .logo {
     display: flex;
 }

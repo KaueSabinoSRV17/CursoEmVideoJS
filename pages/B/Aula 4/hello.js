@@ -9,7 +9,7 @@ function botao() {
 
         var nome = prompt('Obrigado, pode escreve-lo por favor!');
     
-        alert(nome);
+        alert('Olá, seja bem vindo, ' + nome + '!');
         
     } else {
 
@@ -18,16 +18,3 @@ function botao() {
     }    
 
 }
-
-
-/* tentando fazer um pouco melhor (percebe minha falha? SIm, não declarei que nada era uma variável kkkkk. como pude)
-
- function botao() {
-    
-     campo = document.getElementById('nome');
-
-     nome = campo.value
-
-     document.write(nome)
-
- } */

@@ -1,0 +1,5 @@
+@mixin textColor {
+    @if backgroun-color == white  {
+        color: black;
+    }
+}

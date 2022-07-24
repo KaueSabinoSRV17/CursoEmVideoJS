@@ -1,90 +1,27 @@
-.rodape {
+footer {
+
+    h2 {
+        color: white;
+        text-align: center;
+    }
+
+    a {
+        font-size: 2rem;
+        color: white;
+        text-decoration: none;
+    }
+
+    .social-media {
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    gap: 3rem;
     display: flex;
-    position: static;
-    bottom: 0;
-    left: 0;
     flex-direction: column;
-    justify-content: center;
-    border-top: .1rem solid white;
-    padding-top: 1rem;
-    padding-left: 1rem;
+    padding: 1rem;
+    width: 100;
     background-color: black;
-}
-
-.rodape a {
-    color: white;
-}
-
-.navContatos {
-    text-align: center;
-    margin: 1rem auto;
-    width: fit-content;
-}
-
-.rodapeConteudo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.rodapeConteudo p { 
-    font-size: small;
-    display: inline-block;
-    margin-block: 1rem;
-    padding: .5rem 0 0 .5rem;
-    color: white;
-    text-align: justify;
-}
-
-.creditos {
-    color: white;
-    font-size: small;
-    text-align: center;
-}
-
-.tituloRodape {
-    font-size: 1.75em;
-    margin-top: 1rem;
-    margin-inline: auto;
-    text-align: justify;
-    transition: 0.5s;
-}
-
-.flexContatos {
-    display: flex;
-    align-items: center;
-    margin: 1rem auto;
-}
-
-.linkContatos {
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-}
-
-.fotoContato {
-    height: 8rem;
-    width: 8rem;
-    margin: auto 0;
-}
-
-.listaContatos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.liContatos {
-    margin-bottom: 1em;
-}
-
-.linkContatos {
-    text-align: justify;
-    margin-right: 0.75em;
-    font-size: 2.5em;
-    transition: 0.5s;
-}
-
-.linkContatos:hover {
-    font-size: 3em;
 }

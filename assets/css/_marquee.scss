@@ -1,7 +1,9 @@
+@import 'variables';
+
 .marqueJS {
     color: black;
     display: block;
-    background-color: var(--corJS1);
+    background-color: $yellow-js;
     border-bottom: .1rem solid black;
     margin-top: 1rem;
     padding: 1rem;
@@ -12,7 +14,7 @@
 }
 
 .linkMarque {
-    color: var(--corJS2);
+    color: $text-color-dark;
     transition: 0.5s;
 }
 

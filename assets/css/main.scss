@@ -1,5 +1,54 @@
+@import 'variables';
 @import  'root';
 @import 'header';
-@import 'marquee';
+@import 'article';
 @import  'media-query';
 @import  'footer';
+
+.landing-page {
+    background-color: $yellow-js;
+}
+
+.menu {
+
+    h1 {
+        font-weight: bold;
+    }
+
+    :not(h1) {
+        font-size: 1.5rem;
+    }
+
+    p {
+        margin-bottom: 5rem;
+    }
+
+    ul {
+        gap: 1rem;
+
+        .btn {
+            background-color: $yellow-js;
+            border: .1rem solid black;
+            color: black;
+            font-weight: bold;
+        }
+    }
+
+    .themes {
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+    }
+    
+    padding: 2rem;
+
+    border: .1rem solid black;
+    box-shadow: .5rem .5rem .5rem rgba($color: #000000, $alpha: .5);
+    width: 50vw;
+    height: 50vh;
+    background-color: white;
+    border-radius: 1rem;
+
+}

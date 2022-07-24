@@ -1,0 +1,31 @@
+article {
+    .title {
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    .title::after {
+        content: '';
+        display: block;
+        background-color: black;
+        margin-top: .5rem;
+        height: .1rem;
+    }
+
+    p {
+        margin-bottom: 5rem;
+    }
+    ul {
+        padding: 0;
+    }
+    .console {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin: 3rem auto 3rem auto;
+        text-align: center;
+    }
+    margin: 5rem auto 0 auto;
+    width: 65vw;
+    font-size: 1.4rem;
+}

@@ -69,6 +69,7 @@ article {
 article .title {
   font-weight: bold;
   margin-bottom: 1rem;
+  margin-top: 5rem;
 }
 article .title::after {
   content: "";

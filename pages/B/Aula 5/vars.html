@@ -13,6 +13,11 @@
         rel="stylesheet" 
         href="/assets/css/main.css">
     <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" 
+        crossorigin="anonymous">
+    <link 
         rel="shortcut icon" 
         href="media/favicon/favicon-16x16.png" 
         type="image/x-icon">
@@ -20,96 +25,99 @@
 </head>
 
 <body>
-    <header class="cabecalho">
-        <div class="professor">
-            <figure class="logo">
-                <img 
-                    src="/assets/img/static/logoCursoEmVideo.png" 
-                    alt="Logo do Curso em Vídeo" 
-                    class="fotoLogo">
-                <a 
-                    href="cursoemvideo.com" 
-                    class="tituloHeader">
-                    <h1>Curso em Vídeo</h1>
-                </a>
-            </figure>
-        </div>
-        <h1 class="marqueJS">
-            <a
-                href="https://www.youtube.com/playlist?list=PLntvgXM11X6pi7mW0O4ZmfUI1xDSIbmTm">
-                Javascpript
-            </a>
-        </h1>
-        <h3 
-            class="subtitulo" 
-            id="aula"></h3>
-    </header>
-    <main>
-        <article class="anotacoes">
-            <h2 class="tituloArtigo">Tipos de Dados e Variáveis</h2>
-            <h3 class="tituloArtigo">Variáveis</h3>
-            <p class="paragrafoArtigo">As Variáveis são espaços para guardar dados e usa-los em um outro momento do código. para serem declaradas no JS, devemos usar a palavra <i>var</i> e atribuir qualquer valor com um "=" (apenas um igual, sozinho se lê <strong>SEMPRE</strong> como "recebe" no Javascpript). Por exemplo, podemos usar os comandos DOM já ensinados que manipulam específicamente a tabela, sem entrar na árvore (comandos window.")</p>
-            <h4 class="tituloArtigo">Regras</h4>
-            <p class="paragrafoArtigo">Devemos usar as seguintes regras para declarar variáveis:</p>
-            <ul class="listaArtigo">
-                <li class="liArtigo"> - Podem começar com letras, $ ou _</li>
-                <li class="liArtigo"> - <b>NÃO</b> podem comçar com números</li>
-                <li class="liArtigo"> - É possível usar letras ou números</li>
-                <li class="liArtigo"> - É permitido o uso de acentos e símbolos</li>
-                <li class="liArtigo"> - Nao podem conter espaços</li>
-                <li class="liArtigo"> - Não podem ser palavras reservadas a comandos da linguagem, como <i>var</i> ou <i>function</i></li>
-            </ul>
-            <h4 class="tituloArtigo">Dicas</h4>
-            <ul class="listaArtigo">
-                <li class="liArtigo"> - Maúsculas e Minúsculas <b>FAZEM</b> diferença!</li>
-                <li class="liArtigo"> - Use nomes coerentes para as suas variáveis   </li>
-            </ul>
-        </article>
-        <div class="console">
-            <header class="cabecalhoCodigo">
-                <h1 class="tituloCodigo">Prompt Comando</h1>
-            </header>
-            <div class="flexBotao">
-                <button onclick="botao()">Iniciar Código</button>
-            </div>
-        </div>
-    </main>
-    <footer class="rodape">
-        <main class="rodapeConteudo">
-            <p>
-                Todo os direitos reservados a Gustavo Guanabara, criador e professor do curso.
-            </p>
-        </main>
-        a
-        <p class="rodapeConteudo creditos">Página Desenvolvida por @Kauê Sabino</p>
-        <nav class="navContatos">
-            <ul class="listaContatos">
-                <li class="liContatos">
-                    <div class="flexContatos">
-                        <a 
-                        class="linkContatos" 
-                        href="github.com/KaueSabinoSRV17">GitHub
-                        <img 
-                            src="/assets/img/svg/github.svg" 
-                            alt="Logo do GitHub">                            
+        <header class="top-header">
+            <h1 class="navbar-brand">
+                O Manual do Javascript
+            </h1>
+            <nav>
+                <ul class="d-flex">
+                    <li>
+                        <a href="" class="btn">
+                            Primeiros Códigos
                         </a>
-                        
+                    </li>
+                    <li>
+                        <a href="" class="btn">
+                            DOM
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="btn">
+                            Funções
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="body-flex">
+            <main>
+                <article class="anotacoes">
+                    <h2 class="title">Tipos de Dados e Variáveis</h2>
+                    <h3 class="title">Variáveis</h3>
+                    <p class="paragrafoArtigo">As Variáveis são espaços para guardar dados e usa-los em um outro momento do código. para serem declaradas no JS, devemos usar a palavra <i>var</i> e atribuir qualquer valor com um "=" (apenas um igual, sozinho se lê <strong>SEMPRE</strong> como "recebe" no Javascpript). Por exemplo, podemos usar os comandos DOM já ensinados que manipulam específicamente a tabela, sem entrar na árvore (comandos window.")</p>
+                    <h4 class="title">Tipos</h4>
+                    <p class="mb-4">Em Javascript temos diversos tipos de valores para as variáveis. São eles: </p>
+                    <ul>
+                        <li class="mb-3">
+                            - String: Sao valores de texto. estão sempre indicados entre aspas duplas ou simples ou crases, para Strings interpoladas.
+                        </li>
+                        <li class="mb-3">
+                            - Number: Números, que poderão ser inteiros ou reais: Tem os subtipos:
+                            <ul>
+                                <li class="m-4">
+                                    - NaN: Sinal que significa "Não é um número"
+                                </li>
+                                <li class="m-4">
+                                    - Infinity: 
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="mb-3">
+                            - Booleanos: Podem receber apenas <code>true</code> ou <code>false</code>
+                        </li>
+                        <li class="mb-3">
+                            - Undefined: Valores ainda não definidos
+                        </li>
+                        <li class="mb-3">
+                            - Null: Valores vazios (Não é a mesma coisa que Undefinded)
+                        </li>
+                        <li class="mb-3">
+                            - Object: Mapas "chave": "valor"
+                        </li>
+                        <li class="mb-3">
+                            - Function: funções
+                        </li>
+                    </ul>
+                    <h4 class="title">Regras</h4>
+                    <ul class="listaArtigo">
+                        <li class="liArtigo"> - Podem começar com letras, $ ou _</li>
+                        <li class="liArtigo"> - <b>NÃO</b> podem comçar com números</li>
+                        <li class="liArtigo"> - É possível usar letras ou números</li>
+                        <li class="liArtigo"> - É permitido o uso de acentos e símbolos</li>
+                        <li class="liArtigo"> - Nao podem conter espaços</li>
+                        <li class="liArtigo"> - Não podem ser palavras reservadas a comandos da linguagem, como <i>var</i> ou <i>function</i></li>
+                    </ul>
+                    <h4 class="title">Dicas</h4>
+                    <ul class="listaArtigo">
+                        <li class="liArtigo"> - Maúsculas e Minúsculas <b>FAZEM</b> diferença!</li>
+                        <li class="liArtigo"> - Use nomes coerentes para as suas variáveis   </li>
+                    </ul>
+                </article>
+            </main>
+            <footer>
+                <h2><b>Página Desenvolvida por @Kauê</b></h2>
+                <nav class="m-auto">
+                    <div class="social-media">
+                            <img src="/assets/img/svg/github.svg" alt="Logo do Github">
+                            <a href="github.com/login">Github</a>
                     </div>
-                </li>
-                <li class="liContatos">
-                    <div class="flexContatos">
-                        <a 
-                        class="linkContatos" 
-                        href="github.com/KaueSabinoSRV17">Linkedin
-                        <img 
-                            src="/assets/img/svg/linkedin.svg" 
-                            alt="Logo do Linkedin">
-                        </a>                            
+                    <div class="social-media">
+                            <img src="/assets/img/svg/linkedin.svg" alt="Logo do Github">
+                            <a href="linkedin.com/login">Linkedin</a>
                     </div>
-                </li>
-            </ul>
-        </nav>
-    </footer>
+                </nav>
+            </footer>
+        </div>
 </body>
 
 <script src="vars.js"></script>

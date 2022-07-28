@@ -1,3 +1,14 @@
+function component(tag, text, id, cls) {
+    // Teste: uma função com id e classe, um de cada, ou nenhum
+    let id_and_class = id != null && cls != null
+    let id_only = id != null
+    let cls_only = cls != null
+    if (id_and_class) {return `<${tag} id="${id}" class="${cls}">${text}</${tag}>`} 
+    else if (id_only) {return `<${tag} id="${id}">${text}</${tag}>`} 
+    else if (cls_only) {return `<${tag} class="${cls}">${text}</${tag}>`} 
+    else return `<${tag}>${text}</${tag}>`
+}
+
 // Elementos por Classe
     const card = document.getElementsByClassName('menu')[0]
 
@@ -8,27 +19,25 @@
     const navegador = window.navigator.appName
     const url = window.document.URL
 
-// Variáveis. Vou separar todo o texto da página
-    const title = `<h1>Estou invadindo este Conteúdo para explicar um pouco sobre a DOM</h1>`
-    const p1 = '<p></p>'
-    const p2 = `<p>Podemos modificar a dom escrevendo html dentro dela, e acessando os seus elementos. a window, a document e a body sempre serão elementos, para outros devemos dar um atributo HTML id com nossa preferência. todo Elemento é um objeto com métodos que podemos usar para acessar seus elementos filhos. são estes: </p>`
-    const list = `<ul>
-        <li>Tags - Devemos acessar a partir da body</li>
+// Componentes da página
+    const title = component('h1', 'Estou invadindo este Conteúdo para explicar um pouco sobre a DOM')
+    const p1 = component('p', '')
+    const p2 = component('p','Podemos modificar a dom escrevendo html dentro dela, e acessando os seus elementos. a window, a document e a body sempre serão elementos, para outros devemos dar um atributo HTML id com nossa preferência. todo Elemento é um objeto com métodos que podemos usar para acessar seus elementos filhos. são estes: ')
+    const list = component('ul',
+        `<li>Tags - Devemos acessar a partir da body</li>
         <li>Id - Podemos atribui-lo como parâmetro HTML</li>
         <li>Nome - Usado em formulários</li>
         <li>Classe - Declarando como Id</li>
-        <li>QuerySelector</li>
-    </ul>`
-    const p3 = `<p>Se quisermos repetir exatamente o segundo parágrafo, podemos fazer assim: ${p2}</p>`
-    const bonus = `<p>Sabia que o navegador que você está usando agora mesmo é o... ${window.navigator.appName === 'Netscape' ? 'Netscape? Não, provavelmente é um Live Server kkkk' : navegador}<br>A sua URL atual é ${url}</p>`
-    const secret = '<p class="classe-secreta"></p>'
+        <li>QuerySelector</li>`
+    )
+    const p3 = component('p', `Se quisermos repetir exatamente o segundo parágrafo, podemos fazer assim: ${p2}`)
+    const bonus = component('p', `Sabia que o navegador que você está usando agora mesmo é o... ${navegador === 'Netscape' ? 'Netscape? Não, provavelmente é um Live Server kkkk' : navegador}<br>A sua URL atual é ${url}`)
+    const secret = component('p', '', null, 'classe-secreta')
 
-// Concatenação de todas as strings
-    html = title + p1 + p2 + p3 + list + bonus + secret
+// Renderização de todos os componentes na tela
+    card.innerHTML = title + p1 + p2 + p3 + list + bonus + secret
 
-    card.innerHTML = html
-
-// Esta Constante SEMPRE serão o primeiro e segundo parágrafo
+// Não podemos chamar ids de componentes feitos pelo Javascript. vamos ter varrer a página de forma de separada
     const primeiro_paragrafo = document.getElementsByTagName('p')[0]
     const segundo_paragrafo = document.getElementsByTagName('p')[1]
     const bonus_paragrafo = document.getElementsByTagName('p')[5]

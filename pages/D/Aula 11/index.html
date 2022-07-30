@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Condições</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>
+        Condições em Javascript
+    </h1>
+    <p>
+        Condições, em qualquer Linguagem Imperativa, é uma forma de declarar código a ser executado apenas após uma condição for atendida. Podemos ter condições:
+    </p>
+    <ul>
+        <h2>
+            Simples
+        </h2>
+        <li>
+            <p>
+                Acontecem quando apenas precisamos ter um código para o caso da condição ser verdadeira
+            </p>
+        </li>
+        <h2>
+            Composta
+        </h2>
+        <li>
+            <p>
+                Acontece quando precisamos de código para caso a condição também não seja atendida, sendo apenas um else ou um ninho de if e else
+            </p>
+        </li>        
+    </ul>
+    <h1>
+        Sua Vez!
+    </h1>
+    <p>Digite no input abaixo <code>true</code> ou <code>false</code>, um alert diferente vai aparecer para cada caso!</p>
+    <select name="" id="select">
+        <option value="true">
+            true
+        </option>
+        <option value="false">
+            false
+        </option>
+    </select>
+    <button class="btn btn-primary trueFalse">Rodar</button>
+    <p class="resultado"></p>
+    <h1>
+        Desafio da Aula
+    </h1>
+    <p>
+        Digite no input abaixo sua nacionalidade:
+    </p>
+    <input type="text" class="nacionalidade"><button class="check-pais btn btn-primary">Ver pais</button>
+    <p class="resultado-nacionalidade"></p>
+    <script>
+        const true_false = document.querySelector('.trueFalse')
+        const select = document.querySelector('#select')
+        const resultado = document.querySelector('.resultado')
+        const nacionalidade = document.querySelector('.nacionalidade')
+        const button_nacionalidade = document.querySelector('.check-pais')
+        const resultado_nacionalidade = document.querySelector('.resultado-nacionalidade')
+        true_false.addEventListener('click', () => {
+            select.value == 'true' ? resultado.innerText = 'Você digitou um valor verdadeiro!' : resultado.innerText = 'você digitou algo falso!'
+        })
+        button_nacionalidade.addEventListener('click', () => {
+            nacionalidade.value.trim().toLowerCase() != 'brasileiro' ? resultado_nacionalidade.innerText = 'Você é estrangeiro!' : resultado_nacionalidade.innerText = 'Você é um Conterrâneo meu!'
+        })
+    </script>
+  </body>
+</html>

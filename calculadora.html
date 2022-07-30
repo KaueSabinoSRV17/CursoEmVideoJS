@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <title>Calculadora</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <style>
+    body {
+        background-image: url('assets/img/static/background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .centered-div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    #tela {
+        content: '0';
+        margin-bottom: 1rem;
+        padding-right: .2rem;
+        height: 1.5rem;
+        background-color: white;
+        text-align: right;
+    }
+    button:hover {
+        background-color: lightgray !important;
+    }
+    button, .zero {
+        background-color: white !important;
+    }
+    button {
+        width: 2rem;
+        text-align: center;
+    }
+    .linha {
+        justify-content: space-between;
+    }
+    .ops {
+        flex-direction: column;
+        gap: .5rem;
+    }
+    .linha {
+        width: fit-content;
+        margin-left: .1rem !important;
+        margin-bottom: .5rem;
+    }
+    .calculadora {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: fit-content;
+        background-color: black;
+        padding: 1rem;
+    }
+    #tela {
+        text-align: right;
+    }
+    .teclado {
+        display: flex;
+        flex-direction: column;
+    }
+    .teclado-inferior {        
+        display: grid;
+        justify-content: space-between;
+        column-gap: .3rem;
+        row-gap: .5rem;
+        grid-template-areas: 
+            'sete oito nove igual'
+            'Zro Zro ponto igual';
+    }
+    .sete {
+        grid-area: sete;
+    }
+    .oito {
+        grid-area: oito;
+    }
+    .nove {
+        grid-area: nove;
+    }
+    .zero {
+        grid-area: Zro;
+        width: 100%;
+    }
+    .igual {
+        grid-area: igual;
+    }
+    .ponto {
+        grid-area: ponto;
+    }
+  </style>
+  <body>
+    <div class="centered-div">
+        <div class="calculadora">
+            <p id="tela"></p>
+            <div class="teclado">
+                <div class="linha">
+                    <button class="btn c">C</button>
+                    <button class="btn backspace"><</button>
+                    <button class="btn operator">/</button>   
+                    <button class="btn operator">x</button>
+                </div>
+                <div class="linha">
+                    <button class="btn number">1</button>
+                    <button class="btn number">2</button>
+                    <button class="btn number">3</button>
+                    <button class="btn operator">+</button>
+                </div>
+                <div class="linha">
+                    <button class="btn number">4</button>
+                    <button class="btn number">5</button>
+                    <button class="btn number">6</button>
+                    <button class="btn operator">-</button>
+                </div>
+                <div class="teclado-inferior">
+                    <button class="btn number sete">7</button>
+                    <button class="btn number oito">8</button>
+                    <button class="btn number nove">9</button>
+                    <button class="btn igual">=</button>
+                    <button class="btn number zero">0</button>
+                    <button class="btn number ponto">.</button>
+                </div>
+            </div>            
+    </div>
+    <script>
+        // Variáveis e Funções
+            // Elementos DOM
+                let tela = document.querySelector('#tela')
+                let numbers = document.querySelectorAll('.number')
+                let operators = document.querySelectorAll('.operator')
+                let zero = document.querySelector('.zero')
+                let equal = document.querySelector('.igual')
+                let c = document.querySelector('.c')
+                let backspace = document.querySelector('.backspace')
+            // Início das variaveis
+                let number = ''
+        // Eventos
+            // Adiciona os números na tela e na operação, e também limpa a tela e a operação caso a ultima operação tenha terminado
+                numbers.forEach((e) => {
+                e.addEventListener('click', () => {
+                        if (number.includes('=')) {
+                            tela.innerText = ''
+                            number = ''
+                        }
+                        tela.innerText += e.innerText
+                    })
+                })
+            // Adiciona o que estiver na tela a string principal, limpa a tela e adiciona o operador a string principal
+                operators.forEach((e) => {
+                    e.addEventListener('click', () => {
+                        if (e.innerText == 'x') {
+                            number += tela.innerText
+                            number += '*'
+                            tela.innerText = ''
+                        } else {
+                            number += tela.innerText
+                            number += e.innerText
+                            tela.innerText = ''
+                        }
+                    })
+                })          
+            // Calcula a String formada pela tela e a exibe 
+                equal.addEventListener('click', () => {
+                    number += tela.innerText
+                    tela.innerText = eval(number)
+                    number += equal.innerText
+                })
+            // Limpa a Operação e Tela
+                c.addEventListener('click', () => {
+                    tela.innerText = ''
+                    number = ''
+                })
+            // Apaga apenas um número da Tela e da Operação
+                backspace.addEventListener('click', () => {
+                    tela.innerText = tela.innerText.substring(0, tela.innerText.length - 1)
+                    number = number.substring(0, number.length - 1)
+                })
+    </script>
+  </body>
+</html>

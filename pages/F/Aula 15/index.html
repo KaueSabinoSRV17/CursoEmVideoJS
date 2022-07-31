@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>
+        Vetores
+    </title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>
+        Variáveis Compostas
+    </h1>    
+    <p>
+        Uma variáveis composta é uma variável que armazena mais de um valor
+    </p>
+    <h2>
+        Vetores
+    </h2>
+    <p>Um vetor é uma variável composta que armazena mais de um valor, onde estes valores ficam dentro dos elementos, que são acessados através de índices, onde o primeiro é 0</p>
+    <h3>
+        Comandos de vetores
+    </h3>
+    <p>
+        Todo vetor é um objeto que tem métodos básicos. são alguns deles: 
+    </p>
+    <ul>
+        <li><code>.push(valor a ser adicionado)</code> - Método que adiciona o valor</li>
+        <li><code>.length</code> - Atributo que armazena a quantidade de elementos do vetor</li>
+        <li><code>.sort()</code>- Método que vai ordenar os elementos</li>
+        <li><code>.indexOf(valorProcurado)</code>- Método que vai procurar o valor recebido como parâmetro e retornar sua chave de acesso no Vetor. caso este valor não exista neste Vetor, ele vai retornar -1</li>
+    </ul>
+    <h3>
+        Integração do For
+    </h3>
+    <p>
+        Para fazer diversas operações com os elementos de um vetor, podemos usar um For para percorrer este vetor e executar comandos referentes a cada elemento. inclusive, há um for simplificado e otimizado especialmente (e únicamente) para percorrer Variáveis Compostas, ele é assim: <code>for(let i in variavel_composta) {comandos}</code> 
+    </p>
+    <label for="">Pesquise um número no vetor que está declarado no JS!</label>
+    <input type="number">
+    <button class="btn btn-secondary">Pesquisar</button>
+    <p class="output"></p>
+    <script>
+        // variáveis globais
+            // Lista de números do vetor
+                let numeros_decimais = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+            // Elementos DOM
+                const input = document.querySelector('input')
+                const output = document.querySelector('.output')
+                const button = document.querySelector('button')            
+            // Verificação no vetor
+                button.addEventListener('click', () => {
+                    // Limpa o parágrafo a cada consulta
+                        if (output.innerHTML != '' || output.innerHTML != null) {output.innerHTML = ''}
+                    // valor pesquisado pelo usuário
+                        const search = Number(input.value)
+                    // Posicão do número pesquisado    
+                        const posicao = numeros_decimais.indexOf(search)
+                    // Output. caso o valor pesquisado não exista, o erro está retornado
+                        posicao != -1 ? output.innerHTML = `<p>Este era o vetor, os números decimais do 0 ao 9:<br>${numeros_decimais}<br>Na posicão ${posicao} está o valor ${search}</p>` : output.innerHTML = `<p>Este valor <b>não</b> está no vetor!</p>`
+                })
+    </script>
+  </body>
+</html>

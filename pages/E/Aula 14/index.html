@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>For</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h1>Condições - For</h1>
+    <p>
+        O <code>for</code> é uma forma mais intuitiva de escrever uma repetição que será controlada por uma variável útil apenas para ela por exemplo. As partes de <code>for (let index = 0; index < array.length; index++)</code>, sendo, da esquerda para a direita, o início da variável de controle, a condição de quebra do loop (valor ao qual a variável deve chegar, do contrário será um loop infinito!), e o seu incremento
+    </p>
+    <label for="">Digite aqui quantas vezes devemos repetir o comando! (Refatorado com For!)</label>
+    <input type="number">
+    <button class="btn btn-secondary">Repetir</button>
+    <p class="output"></p>
+  </body>
+  <script>
+    // Variáveis Globais
+        // Elementos DOM
+            const input = document.querySelector('input')
+            const button = document.querySelector('button')
+            const output = document.querySelector('.output')
+        // Evento do Botão        
+            button.addEventListener('click', () => {
+                // Limpa o parágrafo de output caso ele esteja não esteja vazio
+                    if (output.innerHTML != null || output.innerHTML != '') {output.innerHTML = ''}
+                // Variável que armazena o limite imposto pelo usuário
+                    count = Number(input.value)
+                // O Comando For. Perceba como o início, o teste condicional e o incremento estão todos juntos.
+                    for (let i = 0; i < count; i++) {
+                        // Números de repetições que faltam são levados em consideração mais uma vez
+                            i === count-1 ? output.innerHTML += '<p>Esta é a última repetição!</p>' : output.innerHTML += `<p>Mais um!!!, faltam mais ${(count-1)-i} repetições!</p>`                
+                    }
+            })
+  </script>
+</html>

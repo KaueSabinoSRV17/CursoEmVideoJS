@@ -27,18 +27,26 @@
     <button class="btn btn-secondary">Repetir</button>
     <p class="output"></p>
     <script>
-        const input = document.querySelector('input')
-        const button = document.querySelector('button')
-        const output = document.querySelector('.output')
-        let count = 0
-        button.addEventListener('click', () => {
-            if (output.innerHTML != null || output.innerHTML != '') {output.innerHTML = ''}
-            count = Number(input.value)
-            while (count > 0) {
-                count === 1 ? output.innerHTML += '<p>Esta é a última repetição!</p>' : output.innerHTML += `<p>Mais um!!!, faltam mais ${count-1} repetições!</p>`
-                count--
-            }
-        })
+      // Variáveis Globais
+        // Elementos DOM
+          const input = document.querySelector('input')
+          const button = document.querySelector('button')
+          const output = document.querySelector('.output')
+        // Inicializando a variável de controle (me sinto mais confortável se ela tiver um escopo global :) )
+          let count = 0
+        // Evento do botão  
+          button.addEventListener('click', () => {
+            // Se o parágrafo de output não estiver limpo, limpamos ele
+              if (output.innerHTML != null || output.innerHTML != '') {output.innerHTML = ''}
+            // valor do input armazenado na variável de controle
+              count = Number(input.value)
+              while (count > 0) {
+                // Caso não seja a última repetição, devemos saber quantas faltam, e caso seja a última, apenas avisamos que é a ultima
+                  count === 1 ? output.innerHTML += '<p>Esta é a última repetição!</p>' : output.innerHTML += `<p>Mais um!!!, faltam mais ${count-1} repetições!</p>`
+                // Decremento da variável de controle, necessária para não iniciar um loop infinito
+                  count--
+              }
+          })
     </script>    
   </body>
 </html>

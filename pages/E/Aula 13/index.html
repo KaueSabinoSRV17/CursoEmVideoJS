@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h1>Laços de repetições</h1>
+    <p>Um laço de repetição repete um bloco de código for verdade. a partir do momento que este teste condicional for falso, as repetições irão parar</p>
+    <h2>Comando <code>while</code></h2>
+    <p>O primeiro comando de repetição a ser usado em Javascript é o <code>while</code>, que vai repetir o bloco enquanto o teste lógico dos parênteses for verdadeiro. podemo ter duas variações, que é o <code>do</code>, <code>{bloco de comando}</code> e <code>(teste condicional)</code>, ou apenas <code>(teste condicional)</code> seguido do <code>{bloco de comando}</code>. a diferença é que <code>do while</code> executa o código pelo menos uma vez, sem depender o resultado do teste condicional, e o <code>while</code> vai realizar o teste antes mesmo de executar o bloco pela primeira vez, isso quer dizer que caso este resultado seja falso, não será executado o bloco nenhuma vez!</p>
+    <label for="">Digite aqui quantas vezes devemos repetir o comando!</label>
+    <input type="number">
+    <button class="btn btn-secondary">Repetir</button>
+    <p class="output"></p>
+    <script>
+        const input = document.querySelector('input')
+        const button = document.querySelector('button')
+        const output = document.querySelector('.output')
+        let count = 0
+        button.addEventListener('click', () => {
+            if (output.innerHTML != null || output.innerHTML != '') {output.innerHTML = ''}
+            count = Number(input.value)
+            while (count > 0) {
+                count === 1 ? output.innerHTML += '<p>Esta é a última repetição!</p>' : output.innerHTML += `<p>Mais um!!!, faltam mais ${count-1} repetições!</p>`
+                count--
+            }
+        })
+    </script>    
+  </body>
+</html>

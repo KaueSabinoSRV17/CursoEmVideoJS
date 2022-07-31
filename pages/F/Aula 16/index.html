@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Funções</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h1>Funções</h1>
+    <p>
+      Funções são blocos de códigos que são executados apenas ao ser chamados.
+      Elas tem os seguintes elementos:
+    </p>
+    <ul>
+      <li>
+        Chamada - feita escrevendo o seu nome, seguido de um abre e fecha
+        parênteses
+      </li>
+      <li>
+        Parâmetros - Valores que vão de dentro dos parênteses da chamada para
+        serem processados dentro da função. algumas funções são definidas sem o
+        uso de parâmetros. Podemos definir valores padrões para parâmetros na
+        declaralção de nossas funções, caso eles sejam muito necessários
+      </li>
+      <li>Ação - Todos os comandos que estão dentro do bloco da função</li>
+      <li>
+        Retorno - valor que é retornado ao chamar esta função. Nem todas as
+        funções precisam de um retorno
+      </li>
+    </ul>
+    <h2>Recursividade</h2>
+    <p>
+      Uma função pode ser recursiva, ou seja, chamar a ela mesma durante a sua
+      execução. O algoritmo de uma fatorial é um exemplo de recursividade
+    </p>
+    <label for="">Escolha o número da fatorial: </label> <input type="number" />
+    <button class="btn btn-secondary">Calcular</button>
+    <p class="output"></p>
+    <script>
+      function fatorial(number) {
+        return number == 1 ? 1 : number * fatorial(number - 1);
+      }
+      let input = document.querySelector("input");
+      const button = document.querySelector("button");
+      const output = document.querySelector(".output")
+      button.addEventListener("click", () => {
+        if (output.innerHTML != '' || output.innerHTML != null) {output.innerHTML = ''}
+        let number = Number(input.value)
+        output.innerHTML += `Segue o resultado do fatorial de ${number}, feito em função: ${fatorial(
+          number
+        )}`;
+      });
+    </script>
+  </body>
+</html>

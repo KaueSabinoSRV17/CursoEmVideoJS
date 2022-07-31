@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Condição Aninhada</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>Condições Aninhadas</h1>
+    <p>Podemos aninhar condições, para quando apenas se e senão não for o bastante para cobrir todas as possiblidades, como a idade para se votar e se devemos dizer Bom Dia, Boa Tarde ou Boa Noite</p>
+    <br>
+    <label for="">Digite quantos anos você tem, e aperte o botão para descobrir se você deve votar: </label><input type="number" class="idade">
+    <button class="btn btn-primary idade_button">Testar</button>
+    <p class="idade_resultado"></p>
+    <p class="hora"></p>
+    <script>
+        // Elementos DOM
+            const idade = document.querySelector('.idade')
+            const idade_button = document.querySelector('.idade_button')
+            const idade_resultado = document.querySelector('.idade_resultado')
+            const p_horario = document.querySelector('.hora')
+        // Variáveis
+            // Declaração de uma instância da Classe Date e armazenamento do resultado de seu método getHours()
+                let horario = new Date()
+                let hora = horario.getHours()
+            // String genérica para todos os resultados    
+                let descricao_hora = `Agora são mais de ${hora}h. `
+        // Condicionais de horário (não tão intuitívo!)
+            if (hora > 12 && hora < 18) {p_horario.innerHTML = `${descricao_hora} Boa tarde!`}
+            else if (hora > 18 && hora < 23) {p_horario.innerHTML = `${descricao_hora} Boa noite!`}
+            else if (hora > 6 && hora < 12) {p_horario.innerHTML = `${descricao_hora} Boa Dia!`}
+            else {p_horario.innerHTML = `${descricao_hora} Boa madrugada!`}
+        // Eventos
+            // Verificar idade de voto
+                idade_button.addEventListener('click', () => {
+                    if (Number(idade.value) < 16) {idade_resultado.innerText = 'Você não pode votar!'}
+                    else if (Number(idade.value) >= 16 && Number(idade.value) <= 17) {idade_resultado.innerText = 'Você pode opcionalmente votar!'}
+                    else if (Number(idade.value) >= 18 && Number(idade.value) <= 60) {idade_resultado.innerHTML = 'Você <strong>Obrigatóriamente</strong> deve votar!'}
+                    else if (Number(idade.value) > 60) {idade_resultado.innerText = 'Você não precisa mais votar!'}
+                })
+    </script>
+  </body>
+</html>
